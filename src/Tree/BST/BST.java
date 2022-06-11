@@ -45,12 +45,20 @@ public class BST<T extends Comparable<T>>   {
                 }
             }
         }
+    }
+    public void FindMin(Node root){
+        Node current=root;
+        while (current.left!=null){
+            current=current.left;
+        }
+        System.out.println(current.value);
+    }
 
-
-
-
-
-
-
+    public void FindMax(Node root){
+        Node current=root;
+        while (current.right!=null){
+            current=current.right;
+        }
+        System.out.println(current.value);
     }
 }
