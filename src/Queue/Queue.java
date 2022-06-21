@@ -4,7 +4,7 @@ public class Queue {
     int[] arr;
     int capacity,front,rear,currentSize;
 
-    Queue(int capacity){
+    public Queue(int capacity){
         this.capacity=capacity;
         arr=new int[capacity];
         front=0;

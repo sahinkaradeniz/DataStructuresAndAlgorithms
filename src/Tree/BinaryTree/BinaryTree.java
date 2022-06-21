@@ -1,4 +1,7 @@
-package Tree.BinaryTree;
+package Tree. BinaryTree;
+
+
+import Queue.Queue;
 
 public class BinaryTree<T extends Comparable<T>>  {
     public void InOrder(Node<T> root){ // InOrder Left-Data-Right
@@ -23,5 +26,14 @@ public class BinaryTree<T extends Comparable<T>>  {
         }
     }
 
+    public static int MaxDepth(Node root){
+        if(root==null) //agacta bir eleman yok ise
+            return 0;
+        int leftDepth=MaxDepth(root.left);
+        int rightDepth=MaxDepth(root.right);
+        return (leftDepth>rightDepth)?
+                leftDepth+1 :
+                rightDepth+1;
+    }
 
 }
